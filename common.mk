@@ -26,6 +26,10 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
+# Alert slider
+PRODUCT_PACKAGES += \
+    tri-state-key-calibrate
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
@@ -249,7 +253,7 @@ PRODUCT_PACKAGES += \
     init.oplus.hw.rc \
     init.oplus.hw.rc.recovery \
     init.oplus.rc \
-    init.oplus.sh \
+    init.oplus_extras.rc \
     init.qcom.early_boot.sh \
     init.qcom.rc \
     init.qcom.recovery.rc \
@@ -312,6 +316,7 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libstagefrighthw
 
+<<<<<<< HEAD
 # OnePlus camera
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-product-oplus.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-product-oplus.xml \
@@ -322,13 +327,17 @@ PRODUCT_COPY_FILES += \
 # OnePlus wrapper
 PRODUCT_BOOT_JARS += \
     oplus-support-wrapper
+=======
+# OnePlus Extras
+PRODUCT_PACKAGES += \
+    OPlusExtras
+>>>>>>> f1db839 (sm8550-common: Configure OPlusExtras)
 
 # Overlays
 $(call inherit-product, hardware/oplus/overlay/generic/generic.mk)
 $(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
 
-DEVICE_PACKAGE_OVERLAYS += \ 
-    $(LOCAL_PATH)/overlay \
+DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-derp
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
@@ -338,6 +347,7 @@ PRODUCT_PACKAGES += \
     OPlusFrameworksResCommon \
     OPlusSettingsResCommon \
     OPlusSystemUIResCommon \
+    OPlusExtrasResCommon \
     WifiResTarget
 
 # Partitions
