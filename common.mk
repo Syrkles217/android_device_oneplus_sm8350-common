@@ -316,7 +316,6 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libstagefrighthw
 
-<<<<<<< HEAD
 # OnePlus camera
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-product-oplus.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-product-oplus.xml \
@@ -327,11 +326,10 @@ PRODUCT_COPY_FILES += \
 # OnePlus wrapper
 PRODUCT_BOOT_JARS += \
     oplus-support-wrapper
-=======
+
 # OnePlus Extras
 PRODUCT_PACKAGES += \
     OPlusExtras
->>>>>>> f1db839 (sm8550-common: Configure OPlusExtras)
 
 # Overlays
 $(call inherit-product, hardware/oplus/overlay/generic/generic.mk)
